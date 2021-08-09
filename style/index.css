@@ -1,0 +1,200 @@
+/* CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Add CSS styling here */
+
+*{
+    box-sizing: border-box; /*when I give an item a width I want padding and margin to be applied within that width not in addition to it*/
+    padding:0;
+    margin:0;
+    max-width:100%;
+    /* border:1px solid grey; */
+}
+
+/* General Styles */
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size:1.6rem;
+    line-height:1.5;
+    background-color: ivory;
+    color:#0e1844; 
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size:7rem;
+    text-align:center;
+    color: ivory;
+}
+h3{
+    font-size: 2rem;
+    text-align:center;
+}
+section{
+    padding: 4% 0;
+}
+
+/*Helper Classes*/
+.bgpic{
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+/* Header */
+nav{
+    display:flex;
+    justify-content:space-between;
+    border:2px solid black;
+    padding: 3%;
+    width:100%;
+    background-color:ivory;
+    z-index: 999;
+}
+.links{
+    width:70%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center; 
+}
+.links a{
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 3%;
+    font-size: 2rem;
+}
+
+/* top section styles */
+#top{
+    height:80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image:url(/Images/forest.jpg);
+    background-position:bottom;
+}
+
+/* middle section styles */
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    text-align: center;
+}
+.column{
+    /* flex: 33.33%; */
+    padding: 1%;
+    float: left;
+    width: 25%;
+
+}
+/* Bottom section styles */
+#contact{
+    text-align: center;
+    font-size: 2rem;
+    padding: 5%;
+    background-color: rgb(235, 228, 228);
+}
+#contact a{
+    text-decoration: none;
+}
+#contact a:hover{
+    color: white;
+}
+
+/* Media Queries go here */
+/* Tablet view - 800px */
+/* when the screen size reaches less then 800px the rules below apply */
+@media (max-width: 800px) {
+    .links {
+        width: 100%;
+    }
+    #Project div .column {
+        background-color:#fff;
+        width:75%;
+    }
+    #top {
+        margin-top: -3.5%
+    }
+    /* .column {
+        width: 50%;
+    } */
+
+}
+
+/* mobile view 500px */
+/* when the screen size reaches less then 500px the riles below apply */
+@media screen and (max-width: 500px) {
+   header nav{
+       flex-direction: column;
+       height: 20vh;
+       align-items: center;
+   }
+   .links {
+       width: 100%;
+       justify-content: center;
+   }
+   .links a {
+        font-weight: 200;
+        text-decoration: none;
+        text-transform: uppercase;
+        /* font-family: Helvetica; */
+        color: #151814;
+        float: none;
+        width: 100%;
+   }
+   #Project div .column {
+    background-color:#fff;
+    width: 50%;
+}
+   .column {
+       width: 100%;
+   }
+   
+   
+}
+
+
+
+
