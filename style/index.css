@@ -148,18 +148,18 @@ nav{
 /* when the screen size reaches less then 800px the rules below apply */
 @media (max-width: 800px) {
     .links {
-        width: 50%;
+        width: 100%;
     }
     #Project div .column {
         background-color:#fff;
-        width:50%;
+        width:75%;
     }
     #top {
         margin-top: -3.5%
     }
-    .column {
+    /* .column {
         width: 50%;
-    }
+    } */
 
 }
 
@@ -184,14 +184,14 @@ nav{
         float: none;
         width: 100%;
    }
+   #Project div .column {
+    background-color:#fff;
+    width: 50%;
+}
    .column {
        width: 100%;
-       float: none;
-       width: 100%;
    }
-   .container {
-       flex-wrap: wrap;
-   }
+   
    
 }
 
